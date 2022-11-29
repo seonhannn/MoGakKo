@@ -1,10 +1,11 @@
 import React from 'react';
+import Community from './pages/Community';
 import MyProfile from './pages/MyProfile';
 
 function App() {
   return (
     <div>
-      <MyProfile></MyProfile>
+      <Community></Community>
     </div>
   );
 }
