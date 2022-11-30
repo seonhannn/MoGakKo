@@ -3,6 +3,7 @@ import styled from "styled-components";
 import CommunityList from "../components/CommunityList";
 import {FaPen} from "react-icons/fa";
 import {FaSearch} from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const CommunityContainer = styled.div`
     .container {
@@ -90,6 +91,13 @@ const CommunityContainer = styled.div`
 `
 
 function Community() {
+
+    const navigate = useNavigate();
+
+    const navigateToCommunityWrite = () => {
+        navigate("/communityWrite");
+    }
+
     return (
         <CommunityContainer>
             <div className="container">
@@ -100,7 +108,9 @@ function Community() {
                             <input className="searchInput" placeholder="질문을 검색해보세요."></input>
                             <FaSearch size={"1.3em"} className="searchIcon"></FaSearch>
                         </div>
-                        <button className="add"><FaPen size={"1.6em"} color="#8EC3B0"></FaPen></button>
+                        <button className="add" onClick={() => navigateToCommunityWrite()}>
+                            <FaPen size={"1.6em"} color="#8EC3B0"></FaPen>
+                        </button>
                     </div>
                 </div>
                 <div className="contents">
