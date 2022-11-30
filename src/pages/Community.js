@@ -1,50 +1,91 @@
 import React from "react";
 import styled from "styled-components";
 import CommunityList from "../components/CommunityList";
+import {FaPen} from "react-icons/fa";
+import {FaSearch} from "react-icons/fa";
 
 const CommunityContainer = styled.div`
     .container {
-        border: 1px solid gray;
-        width: 1400px;
-        height: 100%;
+        width: 60%;
+        min-width: 900px;
         display: flex;
         flex-direction: column;
         margin: 0px auto;
-        padding: 60px;
+        border-radius: 22px;
     }
     .header {
+        height: 80px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background-color: #8EC3B0;
+        padding: 20px;
+        border-radius: 22px 22px 0px 0px;
     }
     .search {
         display: flex;
         align-items: center;
     }
     .logo {
-        font-size: 40px;
-        font-weight: 600;
+        font-size: 26px;
+        font-weight: 800;
+        color: #fff;
     }
     .searchForm {
-        width: 600px;
-        height: 60px;
-        border-radius: 15px;
+        width: 320px;
+        height: 40px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid #fff;
+        background-color: #fff;
+        color: #8EC3B0;
+        border-radius: 18px;
+        box-shadow: 0 4px 8px -7px rgba(0,0,0,1);
+    }
+    .searchInput {
+        width: 280px;
+        height: 30px;
+        border: none;
+        font-size: 18px;
+        font-weight: 600;
+        background: none;
+    }
+    .searchInput::placeholder {
+        color: #BCEAD5;
+        font-size: 16px;
+    }
+    .searchInput:focus {
+        outline: none;
     }
     .add {
-        width: 60px;
-        height: 60px;
-        border-radius: 15px;
-        font-size: 50px;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #DEF5E5;
         cursor: pointer;
-        margin-left: 20px;
     }
-    .info {
-        margin-top: 100px;
-        margin-bottom: 60px;
-        font-size: 26px;
+    .add:hover {
+        background-color: #DEFFEF;
+        transform: scale(1.1);
     }
     .contents {
-        padding: 30px;
+    }
+    .info {
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        display: flex;
+    }
+    .searchIcon:hover {
+        cursor: pointer;
+        transform: scale(1.2);
     }
 `
 
@@ -55,13 +96,18 @@ function Community() {
                 <div className="header">
                     <div className="logo">커뮤니티</div>
                     <div className="search">
-                        <input className="searchForm"></input>
-                        <button className="add">+</button>
+                        <div className="searchForm">
+                            <input className="searchInput" placeholder="질문을 검색해보세요."></input>
+                            <FaSearch size={"1.3em"} className="searchIcon"></FaSearch>
+                        </div>
+                        <button className="add"><FaPen size={"1.6em"} color="#8EC3B0"></FaPen></button>
                     </div>
                 </div>
                 <div className="contents">
-                    <div className="info">자유롭게 질문하고 답변하는 공간이에요.</div>
+                    <div className="info">자유롭게 질문하고 답변하는 공간입니다.</div>
                     <div>
+                        <CommunityList></CommunityList>
+                        <CommunityList></CommunityList>
                         <CommunityList></CommunityList>
                     </div>
                 </div>
