@@ -23,10 +23,14 @@ const AnswerContainer = styled.div`
     .answerUserName {
         font-size: 16px;
         font-weight: 600;
+        letter-spacing: -3px;
     }
     .answerDate {
         font-size: 12px;
         color: #999;
+    }
+    .answerContent {
+        letter-spacing: -3px;
     }
 `
 
@@ -36,7 +40,7 @@ function Answer() {
             <div className="answerContainer">
                 <div className="answerUserInfo">
                     <div className="answerUserImg">
-                            <FaSmileBeam size={"2.4em"} color="#8EC3B0"></FaSmileBeam>
+                            <FaSmileBeam size={"2.4em"} color="#BCEAD5"></FaSmileBeam>
                     </div>
                     <div className="answerWriter">
                         <div className="answerUserName">

@@ -7,15 +7,15 @@ import { useNavigate } from "react-router-dom";
 
 const CommunityContainer = styled.div`
     .container {
-        width: 60%;
-        min-width: 900px;
+        width: 710px;
+        min-width: 700px;
         display: flex;
         flex-direction: column;
         margin: 0px auto;
         border-radius: 22px;
     }
     .header {
-        height: 80px;
+        height: 50px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -28,14 +28,14 @@ const CommunityContainer = styled.div`
         align-items: center;
     }
     .logo {
-        font-size: 26px;
+        font-size: 20px;
         font-weight: 800;
         color: #fff;
     }
     .searchForm {
-        width: 320px;
-        height: 40px;
-        margin-right: 10px;
+        width: 260px;
+        height: 30px;
+        margin-right: 14px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -46,16 +46,16 @@ const CommunityContainer = styled.div`
         box-shadow: 0 4px 8px -7px rgba(0,0,0,1);
     }
     .searchInput {
-        width: 280px;
+        width: 200px;
         height: 30px;
         border: none;
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 600;
         background: none;
     }
     .searchInput::placeholder {
         color: #BCEAD5;
-        font-size: 16px;
+        font-size: 14px;
     }
     .searchInput:focus {
         outline: none;
@@ -63,8 +63,8 @@ const CommunityContainer = styled.div`
     .add {
         border: none;
         border-radius: 50%;
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -78,10 +78,11 @@ const CommunityContainer = styled.div`
     .contents {
     }
     .info {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 600;
         margin-top: 40px;
         margin-bottom: 40px;
+        margin-left: 5px;
         display: flex;
     }
     .searchIcon:hover {
