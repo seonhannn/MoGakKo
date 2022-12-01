@@ -1,10 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import { FaSmileBeam } from "react-icons/fa";
+import InfoContainer from "../components/InfoContainer";
+import Skill from "../components/Skill";
+import Location from "../components/Location";
+import Manner from "../components/Manner";
 
 const ProfileContainer = styled.div`
     .profileContainer {
         width: 700px;
-        border: 1px solid gray;
+        border: 4px solid #BCEAD5;
+        border-radius: 10px;
         display: flex;
         flex-direction: column;
         margin: 0px auto;
@@ -12,14 +18,26 @@ const ProfileContainer = styled.div`
     .profileUserName {
         display: flex;
         justify-content: center;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: -3px;
+        margin-top: 60px;
     }
-    .profileUserInfoTop {
+    .profileContent {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
     }
-    .profileUserInfoBottom {
+    .profileImg {
         display: flex;
-        justify-content: space-between;
+        margin: 0px auto;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        border: 2px solid #ddd;
+        border-radius: 50%;
+    }
+    .infoContent {
+        margin-top: 60px;
     }
 `
 
@@ -28,39 +46,18 @@ function Profile() {
         <ProfileContainer>
             <div className="profileContainer">
                 <div className="profileUserName">담비님의 프로필</div>
-                <div className="profileUserInfoTop">
-                    <div className="profileImg">사진</div>
-                    <div className="profileUserInfo">
-                        <div>
-                            <div>한줄소개</div>
-                            <div>프론트엔드 개발자입니다.</div>
-                        </div>
-                        <div>
-                            <div>연락처</div>
-                            <div>test@gmail.com</div>
-                        </div>
-                        <div>
-                            <div>깃허브</div>
-                            <div>test@github.io</div>
-                        </div>
+                <div className="profileContent">
+                    <div className="profileImg">
+                        <FaSmileBeam size={"8em"} color="#BCEAD5"></FaSmileBeam>
                     </div>
-                </div>
-                <div className="profileUserInfoBottom">
-                    <div className="profileUserInfo">
-                        <div>
-                            <div>기술 및 스택</div>
-                            <div>JavaScript Dart</div>
-                        </div>
-                        <div>
-                            <div>지역 및 시간</div>
-                            <div>
-                                <div>신촌역</div>
-                                <div>토요일 오후7시이후</div>
-                            </div>
-                        </div>
-                        <div>한 줄 코멘트</div>
+                    <Manner></Manner>
+                    <div className="infoContent">
+                        <InfoContainer title="한 줄 소개" content="프론트엔드 개발자입니다."></InfoContainer>
+                        <InfoContainer title="연락처" content="test@gmail.com"></InfoContainer>
+                        <InfoContainer title="깃허브" content="test@github.io"></InfoContainer>
+                        <Skill></Skill>
+                        <Location></Location>
                     </div>
-                    <div>매너온도</div>
                 </div>
             </div>
         </ProfileContainer>

@@ -6,7 +6,7 @@ import UserSkillInfo from "../components/UserSkillInfo";
 import Comment from "../components/Comment";
 
 const MyProfileContainer = styled.div`
-
+    
 `
 
 function myProfile() {
