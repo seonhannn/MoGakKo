@@ -5,6 +5,8 @@ import InfoContainer from "../components/InfoContainer";
 import Skill from "../components/Skill";
 import Location from "../components/Location";
 import Manner from "../components/Manner";
+import ProfileComment from "../components/ProfileComment";
+import ModalView from "../components/Modal";
 
 const ProfileContainer = styled.div`
     .profileContainer {
@@ -39,6 +41,16 @@ const ProfileContainer = styled.div`
     .infoContent {
         margin-top: 60px;
     }
+    .profileCommentTitle {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+    .profileCommentBox {
+        margin-bottom: 60px;
+    }
 `
 
 function Profile() {
@@ -57,6 +69,14 @@ function Profile() {
                         <InfoContainer title="깃허브" content="test@github.io"></InfoContainer>
                         <Skill></Skill>
                         <Location></Location>
+                        <div className="profileCommentBox">
+                            <div className="profileCommentTitle">
+                                한 줄 코멘트
+                            </div>
+                            <ProfileComment></ProfileComment>
+                            <ProfileComment></ProfileComment>
+                            <ProfileComment></ProfileComment>
+                        </div>
                     </div>
                 </div>
             </div>
