@@ -4,8 +4,7 @@ import { FaSmileBeam } from "react-icons/fa";
 
 const ProfileCommentContainer = styled.div`
     .profileCommentContainer {
-        border: 3px solid #bcead5;
-        border-radius: 22px;
+        border-bottom: 2px solid #749F82;
         padding: 10px;
         display: flex;
         flex-direction: row;
@@ -14,9 +13,13 @@ const ProfileCommentContainer = styled.div`
     }
     .profileCommentUserName {
         margin-left: 10px;
+        font-size: 18px;
         font-weight: 600;
         margin-right: 20px;
         letter-spacing: -3px;
+    }
+    .profileCommentContent {
+        font-size: 18px;
     }
 `
 
@@ -25,10 +28,10 @@ function ProfileComment() {
         <ProfileCommentContainer>
             <div className="profileCommentContainer">
                 <div className="profileCommentImg">
-                    <FaSmileBeam size={"2em"} color="#BCEAD5"></FaSmileBeam>
+                    <FaSmileBeam size={"3em"} color="#749F82"></FaSmileBeam>
                 </div>
                 <div className="profileCommentUserName">닉네임</div>
-                <div>test 문구입니다.</div>
+                <div className="profileCommentContent">좋은 팀원입니다!</div>
             </div>
         </ProfileCommentContainer>
     )

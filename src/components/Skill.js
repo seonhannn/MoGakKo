@@ -3,10 +3,9 @@ import styled from "styled-components";
 
 const SkillContainer = styled.div`
     .skillTitle {
-        font-size: 15px;
+        font-size: 18px;
         font-weight: 600;
-        width: 400px;
-        border-bottom: 4px solid #DEF5E5;
+        padding-bottom: 10px;
     }
     .skillContent {
         flex-direction: column;
@@ -16,11 +15,12 @@ const SkillContainer = styled.div`
         display: inline-flex;
         padding: 10px;
         letter-spacing: -1px;
-        font-size: 14px;
+        font-size: 16px;
         margin-top: 10px;
         margin-right: 14px;
         margin-bottom: 36px;
-        background-color: #DEF5E5;
+        background-color: #749F82;
+        color: #fff;
         border-radius: 22px;
     }
 `

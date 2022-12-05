@@ -7,19 +7,25 @@ const MannerContainer = styled.div`
         flex-direction: column;
         align-items: center;
         font-size: 16px;
+        font-weight: 600;
     }
     .manner {
         width: 200px;
         height: 30px;
         margin-top: 10px;
-        border: 2px solid #9ED5C5;
+        display: flex;
+        align-items: center;
+        position: relative;
+        border: 4px solid #749F82;
         border-radius: 16px;
     }
     .mannerBar {
         width: 160px;
         height: 100%;
-        border: none;
-        background-color: #9ED5C5;
+        position: absolute;
+        left: -4px;
+        border: 2px solid #749F82;
+        background-color: #749F82;
         border-radius: 16px 0 0 16px;
     }
 `

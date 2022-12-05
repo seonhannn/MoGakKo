@@ -12,18 +12,18 @@ const CommunityListContainer = styled.div`
         margin: 0px auto;
         width: 700px;
         flex-direction: column;
-        border: 4px solid #BCEAD5;
+        border: 4px solid #425F57;
         border-radius: 10px;
         margin-bottom: 40px;
-        box-shadow: 0 1.6px 3px 0.8px #8EC3B0;
+        box-shadow: 0 1.6px 3px 0.8px #ddd;
     }
     .listHeader {
         display: flex;
         justify-content: flex-end;
         align-items: center;
         padding: 10px;
-        border-bottom: 4px solid #BCEAD5;
-        background-color: 
+        background-color: #749F82;
+        position: relative;
     }
     .userInfo {
         display: flex;
@@ -34,28 +34,33 @@ const CommunityListContainer = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
     .userName {
-        font-size: 16px;
-        font-weight: 600;
+        font-size: 17px;
+        font-weight: 700;
         letter-spacing: -3px;
+        color: #425F57;
     }
     .date {
         font-size: 12px;
-        color: #999;
+        color: #425F57;
     }
     .reportBtn {
         border: none;
-        width: 50px;
-        height: 26px;
-        margin-right: 10px;
-        border-radius: 12px;
-        background-color: #DEF5E5;
-        color: #8EC3B0;
+        width: 40px;
+        height: 23px;
+        font-size: 14px;
+        border-radius: 5px;
+        background-color: #425F57;
+        color: #fff;
         cursor: pointer;
+        position: absolute;
+        left: 12px;
     }
     .reportBtn:hover {
-        background-color: #BCEAD5;
+        background-color: #557153;
+        color: #fff;
     }
     .contentContainer {
         padding: 30px;
@@ -67,7 +72,7 @@ const CommunityListContainer = styled.div`
         padding: 20px;
     }
     .answerIcon {
-        margin-bottom: 6px;
+        margin-bottom: 2px;
         display: flex;
         justify-content: center;
     }
@@ -108,7 +113,7 @@ function CommunityList() {
         setAnswer(isOpen => !isOpen);
     }
 
-    // my profile 이동
+    // profile 이동
     const navigateToProfile = () => {
         navigate("/profile");
     }
@@ -124,7 +129,7 @@ function CommunityList() {
                             <div className="date">22-11-29</div>
                         </div>
                         <div className="userImg">
-                            <FaSmileBeam size={"2.4em"} color="#BCEAD5"></FaSmileBeam>
+                            <FaSmileBeam size={"2.4em"} color="#425F57"></FaSmileBeam>
                         </div>
                     </div>
                 </div>
@@ -133,7 +138,7 @@ function CommunityList() {
                 </div>
                 <div className="answer">
                     <div className="answerIcon">
-                        <FaAngleDown className={isOpen ? "openedAnswer" : "closedAnswer"} size={"2em"} color="#8EC3B0" onClick={() => toggleAnswer()}></FaAngleDown>
+                        <FaAngleDown className={isOpen ? "openedAnswer" : "closedAnswer"} size={"2em"} color="#5F8D4E" onClick={() => toggleAnswer()}></FaAngleDown>
                     </div>
                     <div className={isOpen ? "showAnswer" : "hideAnswer"}>
                         <Answer></Answer>

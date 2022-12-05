@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 const InfoBox = styled.div`
     .infoTitle {
-        font-size: 15px;
+        font-size: 18px;
         font-weight: 600;
         width: 400px;
-        border-bottom: 4px solid #DEF5E5;
+        padding-bottom: 10px;
     }
     .infoText {
         margin-top: 6px;

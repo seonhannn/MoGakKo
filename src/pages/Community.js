@@ -19,7 +19,7 @@ const CommunityContainer = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #8EC3B0;
+        background-color: #425F57;
         padding: 20px;
         border-radius: 22px 22px 0px 0px;
     }
@@ -41,7 +41,7 @@ const CommunityContainer = styled.div`
         justify-content: center;
         border: 3px solid #fff;
         background-color: #fff;
-        color: #8EC3B0;
+        color: #749F82;
         border-radius: 18px;
         box-shadow: 0 4px 8px -7px rgba(0,0,0,1);
     }
@@ -54,7 +54,7 @@ const CommunityContainer = styled.div`
         background: none;
     }
     .searchInput::placeholder {
-        color: #BCEAD5;
+        color: #749F82;
         font-size: 14px;
     }
     .searchInput:focus {
@@ -68,11 +68,10 @@ const CommunityContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #DEF5E5;
+        background-color: #fff;
         cursor: pointer;
     }
     .add:hover {
-        background-color: #DEFFEF;
         transform: scale(1.1);
     }
     .contents {
@@ -110,7 +109,7 @@ function Community() {
                             <FaSearch size={"1.3em"} className="searchIcon"></FaSearch>
                         </div>
                         <button className="add" onClick={() => navigateToCommunityWrite()}>
-                            <FaPen size={"1.6em"} color="#8EC3B0"></FaPen>
+                            <FaPen size={"1.6em"} color="#749F82"></FaPen>
                         </button>
                     </div>
                 </div>

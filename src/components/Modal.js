@@ -1,20 +1,24 @@
-import Modal from './Modal';
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import Modal from './ModalView';
 
-const ModalView = () => {
-  const [isOpen, setOpen] = useState(false);
+function ShowModal(props) {
+  const [modalOpen, setModalOpen] = useState(false);
 
-  const onClick = () => {
-    setOpen(true);
+  const openModal = () => {
+    setModalOpen(true);
+  };
+  const closeModal = () => {
+    setModalOpen(false);
   };
 
   return (
-    <div className="ModalView">
-      <button onClick={onClick}>open Modal</button>
-      <Modal isOpen={isOpen} />
+    <div>
+      <button onClick={openModal}>{props.title}</button>
+      <Modal open={modalOpen} close={closeModal}>
+        {props.content}
+      </Modal>
     </div>
   );
-};
+}
 
-export default ModalView;
+export default ShowModal;

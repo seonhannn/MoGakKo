@@ -1,16 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import {FaSmileBeam} from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const AnswerContainer = styled.div`
     .answerContainer {
         display: flex;
         align-items: center;
-        border-bottom: 2px solid #DEF5E5;
+        border-bottom: 2px solid #749F82;
         padding: 10px;
     }
     .answerUserInfo {
         display: flex;
+        cursor: pointer;
     }
     .answerWriter {
         display: flex;
@@ -35,12 +37,19 @@ const AnswerContainer = styled.div`
 `
 
 function Answer() {
+
+    const navigate = useNavigate();
+
+    const navigateToProfile = () => {
+        navigate("/profile");
+    }
+
     return (
         <AnswerContainer>
             <div className="answerContainer">
-                <div className="answerUserInfo">
+                <div className="answerUserInfo" onClick={() => navigateToProfile()}>
                     <div className="answerUserImg">
-                            <FaSmileBeam size={"2.4em"} color="#BCEAD5"></FaSmileBeam>
+                            <FaSmileBeam size={"2.4em"} color="#425F57"></FaSmileBeam>
                     </div>
                     <div className="answerWriter">
                         <div className="answerUserName">
